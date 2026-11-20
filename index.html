@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOM Team México | Yard Safety Compliance</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    background: #146eb4;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.header h1 { margin-bottom: 10px; }
+
+.section {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.10);
+}
+
+.goal { border-left: 8px solid #2e7d32; }
+.red { border-left: 8px solid #d32f2f; }
+.green { border-left: 8px solid #2e7d32; }
+
+.goal-step {
+    background: #e8f5e9;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.alert-red, .alert-green {
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.alert-red { background: #d32f2f; }
+.alert-green { background: #2e7d32; }
+
+h2 { margin-bottom: 15px; }
+
+ul { margin-left: 20px; }
+li { margin-bottom: 8px; }
+
+.checkbox-group label, .final-check {
+    display: block;
+    background: #f7f7f7;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+}
+
+input[type=text], input[type=date] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    flex: 1;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit {
+    background: #ff9900;
+    color: white;
+}
+
+.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.btn:disabled {
+    background: #bdbdbd;
+    cursor: not-allowed;
+}
+
+.warning {
+    background: #fff8e1;
+    border-left: 6px solid #ff9900;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    padding: 20px;
+}
+
+@media(max-width:768px) {
+    .header h1 { font-size: 24px; }
+    .alert-red, .alert-green { font-size: 18px; }
+    .section { padding: 15px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+    <h1>🚛 TOM TEAM MÉXICO</h1>
+    <h3>YARD SAFETY COMPLIANCE</h3>
+    <p>Reconocimiento y aceptación de Yard Rules antes de ingresar al sitio.</p>
+</div>
+
+<div class="section goal">
+    <h2>✅ GOAL (GET OUT AND LOOK)</h2>
+    <div class="goal-step">🚶 Baja de la unidad</div>
+    <div class="goal-step">👀 Inspecciona completamente el área</div>
+    <div class="goal-step">⚠️ Identifica riesgos potenciales</div>
+    <div class="goal-step">✅ Confirma que la maniobra es segura</div>
+    <p style="margin-top:15px;color:#d32f2f;font-weight:bold;">
+        SI EXISTE DUDA, REALIZA GOAL
+    </p>
+</div>
+
+<div class="section red">
+    <div class="alert-red">🔴 SEMÁFORO ROJO = NO MOVER</div>
+    <ul>
+        <li>No acoplar remolques.</li>
+        <li>No desacoplar remolques.</li>
+        <li>No retirar remolques.</li>
+        <li>No colocar remolques en cortina.</li>
+        <li>No iniciar ninguna maniobra.</li>
+        <li>Esperar autorización y semáforo verde.</li>
+    </ul>
+</div>
+
+<div class="section green">
+    <div class="alert-green">🟢 OPERACIÓN AUTORIZADA</div>
+    <ul>
+        <li>Acoplar remolque.</li>
+        <li>Desacoplar remolque.</li>
+        <li>Retirar remolque.</li>
+        <li>Colocar remolque en cortina.</li>
+        <li>Colocar cono y calza.</li>
+        <li>Seguir procedimientos TOM.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>✅ Confirmación de Reglas Críticas</h2>
+
+    <div class="checkbox-group">
+        <label><input type="checkbox"> Entiendo que está prohibido transitar con puertas abiertas.</label>
+        <label><input type="checkbox"> Entiendo que debo utilizar el paso peatonal.</label>
+        <label><input type="checkbox"> Entiendo que debo apagar la unidad al estacionarme y al descender de ella.</label>
+        <label><input type="checkbox"> Entiendo que Amazon tiene cero tolerancia a cualquier tipo de violencia.</label>
+        <label><input type="checkbox"> Entiendo que debo realizar GOAL antes de cualquier maniobra.</label>
+        <label><input type="checkbox"> Entiendo que están prohibidas las reparaciones mecánicas y la limpieza de unidades dentro del yard.</label>
+        <label><input type="checkbox"> Entiendo que el límite máximo de velocidad es de 8 km/h.</label>
+        <label><input type="checkbox"> Entiendo el significado y cumplimiento obligatorio de los semáforos.</label>
+        <label><input type="checkbox"> Comprendo y acepto las Yard Rules.</label>
+    </div>
+</div>
+
+<div class="section">
+    <h2>📋 Información del Operador</h2>
+
+    <label>Nombre del operador y acompañantes:</label>
+    <input type="text" id="nombre" placeholder="Nombre completo">
+
+    <label>Carrier:</label>
+    <input type="text" id="carrier" placeholder="Nombre del Carrier">
+
+    <label>Fecha:</label>
+    <input type="date" id="fecha">
+</div>
+
+<div class="section warning">
+    <h2>⚠️ Posibles Consecuencias por Incumplimiento</h2>
+    <ul>
+        <li>Restricción temporal o permanente de acceso al sitio.</li>
+        <li>Negación de carga o descarga.</li>
+        <li>Expulsión inmediata del yard.</li>
+        <li>Responsabilidad por daños a propiedad Amazon.</li>
+        <li>Responsabilidad por daños a terceros.</li>
+        <li>Acciones disciplinarias por parte del Carrier.</li>
+        <li>Posibles implicaciones legales aplicables.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <label class="final-check">
+        <input type="checkbox" id="aceptacionFinal">
+        Declaro que he leído, entendido y aceptado todas las Yard Rules y las consecuencias asociadas por incumplimiento.
+    </label>
+
+    <div class="actions" style="margin-top:20px;">
+        <button id="btnEnviar" class="btn submit" onclick="submitForm()" disabled>
+            ✅ Enviar Confirmación
+        </button>
+    </div>
+</div>
+
+<div class="footer">
+    TOM Team México | Yard Safety Compliance
+</div>
+
+</div>
+
+<script>
+
+const fechaInput = document.getElementById("fecha");
+const btnEnviar = document.getElementById("btnEnviar");
+
+const GRUPO_WHATSAPP =
+"https://chat.whatsapp.com/CbJrWzdR6JTLxLIbIBlmyd?s=cl&p=a&iam=2";
+
+const reglas = [
+"Entiendo que está prohibido transitar con puertas abiertas.",
+"Entiendo que debo utilizar el paso peatonal.",
+"Entiendo que debo apagar la unidad al estacionarme y al descender de ella.",
+"Entiendo que Amazon tiene cero tolerancia a cualquier tipo de violencia.",
+"Entiendo que debo realizar GOAL antes de cualquier maniobra.",
+"Entiendo que están prohibidas las reparaciones mecánicas y la limpieza de unidades dentro del yard.",
+"Entiendo que el límite máximo de velocidad es de 8 km/h.",
+"Entiendo el significado y cumplimiento obligatorio de los semáforos.",
+"Comprendo y acepto las Yard Rules."
+];
+
+fechaInput.max = new Date().toISOString().split("T")[0];
+
+function validarFormulario() {
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const carrier = document.getElementById("carrier").value.trim();
+    const fecha = fechaInput.value;
+
+    const aceptacionFinal =
+        document.getElementById("aceptacionFinal").checked;
+
+    const checkboxes = document.querySelectorAll(
+        ".checkbox-group input[type='checkbox']"
+    );
+
+    const todosAceptados =
+        [...checkboxes].every(c => c.checked);
+
+    btnEnviar.disabled = !(
+        nombre &&
+        carrier &&
+        fecha &&
+        aceptacionFinal &&
+        todosAceptados
+    );
+}
+
+document.querySelectorAll("input").forEach(input => {
+    input.addEventListener("input", validarFormulario);
+    input.addEventListener("change", validarFormulario);
+});
+
+function submitForm() {
+
+    const nombre =
+        document.getElementById("nombre").value.trim();
+
+    const carrier =
+        document.getElementById("carrier").value.trim();
+
+    const fecha = fechaInput.value;
+
+    const checkboxes = document.querySelectorAll(
+        ".checkbox-group input[type='checkbox']"
+    );
+
+    const aceptacionFinal =
+        document.getElementById("aceptacionFinal").checked;
+
+    if (!nombre || !carrier || !fecha) {
+        alert("⚠️ Complete todos los datos del operador.");
+        return;
+    }
+
+    if (![...checkboxes].every(c => c.checked)) {
+        alert("⚠️ Debe confirmar todas las Yard Rules.");
+        return;
+    }
+
+    if (!aceptacionFinal) {
+        alert("⚠️ Debe aceptar la declaración final.");
+        return;
+    }
+
+    const fechaEnvio = new Date().toLocaleString("es-MX");
+
+    let mensaje =
+`🚛 *TOM TEAM MÉXICO*
+*YARD SAFETY COMPLIANCE*
+
+✅ *NUEVA CONFIRMACIÓN DE YARD RULES*
+
+👤 *INFORMACIÓN DEL OPERADOR*
+
+• Nombre: ${nombre}
+• Carrier: ${carrier}
+• Fecha de registro: ${fecha}
+• Fecha y hora de envío: ${fechaEnvio}
+
+━━━━━━━━━━━━━━━━━━
+
+✅ *REGLAS DE SEGURIDAD ACEPTADAS*
+
+${reglas.map((regla, index) =>
+    `${index + 1}. ${regla} ✅`
+).join("\n")}
+
+━━━━━━━━━━━━━━━━━━
+
+🟢 *DECLARACIÓN FINAL*
+
+El operador declara que ha leído, entendido y aceptado todas las Yard Rules y sus consecuencias por incumplimiento.
+
+📋 *ESTATUS: CONFIRMACIÓN COMPLETADA*
+
+TOM Team México
+Yard Safety Compliance`;
+
+    const whatsappURL =
+        "https://api.whatsapp.com/send?text=" +
+        encodeURIComponent(mensaje);
+
+    const abrirWhatsApp = confirm(
+        "✅ Confirmación validada correctamente.\n\n" +
+        "Operador: " + nombre +
+        "\nCarrier: " + carrier +
+        "\n\nPresiona ACEPTAR para preparar el mensaje en WhatsApp."
+    );
+
+    if (!abrirWhatsApp) return;
+
+    window.open(whatsappURL, "_blank");
+
+    setTimeout(() => {
+        const irGrupo = confirm(
+            "📲 El mensaje está preparado en WhatsApp.\n\n" +
+            "Después de enviarlo, puedes abrir el grupo TOM Team México."
+        );
+
+        if (irGrupo) {
+            window.open(GRUPO_WHATSAPP, "_blank");
+        }
+    }, 800);
+}
+
+validarFormulario();
+
+</script>
+
+</body>
+</html>
