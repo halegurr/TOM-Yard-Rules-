@@ -175,7 +175,7 @@ input[type=text], input[type=date] {
 </div>
 
 <div class="section green">
-    <div class="alert-green">🟢 OPERACIÓN AUTORIZADA</div>
+    <div class="alert-green">🟢 SEMÁFORO VERDE = OPERACIÓN AUTORIZADA</div>
     <ul>
         <li>Acoplar remolque.</li>
         <li>Desacoplar remolque.</li>
@@ -253,7 +253,7 @@ const fechaInput = document.getElementById("fecha");
 const btnEnviar = document.getElementById("btnEnviar");
 
 const GRUPO_WHATSAPP =
-"https://chat.whatsapp.com/CbJrWzdR6JTLxLIbIBlmyd?s=cl&p=a&iam=2";
+"https://chat.whatsapp.com/GtLvOrNYN4ZH7AQs5noBxV";
 
 const reglas = [
 "Entiendo que está prohibido transitar con puertas abiertas.",
@@ -365,31 +365,30 @@ El operador declara que ha leído, entendido y aceptado todas las Yard Rules y s
 TOM Team México
 Yard Safety Compliance`;
 
-    const whatsappURL =
-        "https://api.whatsapp.com/send?text=" +
-        encodeURIComponent(mensaje);
-
     const abrirWhatsApp = confirm(
-        "✅ Confirmación validada correctamente.\n\n" +
+        "✅ Confirmación validada correctamente.\\n\\n" +
         "Operador: " + nombre +
-        "\nCarrier: " + carrier +
-        "\n\nPresiona ACEPTAR para preparar el mensaje en WhatsApp."
+        "\\nCarrier: " + carrier +
+        "\\n\\nPresiona ACEPTAR para copiar el reporte y abrir el grupo."
     );
 
     if (!abrirWhatsApp) return;
 
-    window.open(whatsappURL, "_blank");
-
-    setTimeout(() => {
-        const irGrupo = confirm(
-            "📲 El mensaje está preparado en WhatsApp.\n\n" +
-            "Después de enviarlo, puedes abrir el grupo TOM Team México."
-        );
-
-        if (irGrupo) {
+    // WhatsApp no permite enviar automáticamente a un grupo mediante
+    // un enlace de invitación. Se copia el reporte para pegarlo en el grupo.
+    navigator.clipboard.writeText(mensaje)
+        .then(() => {
+            alert("✅ Reporte copiado. En el grupo de WhatsApp, pega el mensaje y presiona Enviar.");
             window.open(GRUPO_WHATSAPP, "_blank");
-        }
-    }, 800);
+        })
+        .catch(() => {
+            // Alternativa si el navegador bloquea el portapapeles.
+            window.open(
+                "https://api.whatsapp.com/send?text=" + encodeURIComponent(mensaje),
+                "_blank"
+            );
+            alert("No se pudo copiar automáticamente. WhatsApp abrirá el mensaje preparado; copia su contenido y compártelo en el grupo.");
+        });
 }
 
 validarFormulario();
